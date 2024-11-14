@@ -4,45 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Str;
 class PostController extends Controller
 {
     public function index(){
-        $post=Post::orderBy('created_at','desc')->get();
-        return view('posts.index',['posts'=>$post]);
+        $posts=Post::orderBy('created_at','desc')->get();
+        $pagetitle='Feel Salad';
+        $pageinfo='';
+        return view('posts.index',compact('posts','pagetitle','pageinfo'));
     }
 
-    public function create(){
-        return view('posts.create');
-    }
+
     public function show($id){
         $post=Post::findOrFail($id);
-        return view('posts.show',compact('post'));
-    }
-    // 投稿を保存
-    public function store(Request $request) {
-        // 検証
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+        $pagetitle=Post::findOrFail($id)->title;
 
-        $post = new Post;
+        $pageinfo=Str::limit( strip_tags(Post::findOrFail($id)->description),100,'...') ;
 
-        if ($request->hasFile('image')) {
-            $file_name = time() . '.' . $request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images'), $file_name);
-            $post->image = $file_name;
-        } else {
-            // 画像がない場合、空のままにするか、デフォルト値を設定
-            $post->image = null;  // 例えばデフォルトでnullをセット
-        }
-        $post->title = $request->title;
-        $post->description = $request->description;
-
-
-        $post->save();
-        return redirect()->route('posts.index')->with('success', 'Post created successfully.');
+        return view('posts.show',compact('post','pagetitle','pageinfo'));
     }
 }
 

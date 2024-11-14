@@ -28,15 +28,4 @@
         </div>
     </div>
 @endsection
-{{--                    <div class="col-12">--}}
-{{--                        <div class="row">--}}
-{{--                            <div class="col-2">--}}
-{{--                                <img class="img-fluid" style="max-width:50%;" src="{{ asset('images/'.$post->image)}}" alt="">--}}
-{{--                            </div>--}}
-{{--                            <div class="col-10">--}}
-{{--                                <h4>{{$post->title}}</h4>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <p>{{$post->description}}</p>--}}
-{{--                        <hr>--}}
-{{--                    </div>--}}
+

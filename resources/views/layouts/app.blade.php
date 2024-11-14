@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<head>
+<head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FEEL SALAD</title>
+    <title>Feel Salad</title>
+    <meta name="twitter:card" content="summary">
+    <meta name="og:title" content="{{$pagetitle}}">
+    <meta name="og:description" content="{{$pageinfo}}">
+     <meta name="og:image" content="https://towacott.sakura.ne.jp/website/feelsalad/laravel/public/imageMain.png">
+    
 
  @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -35,8 +40,8 @@
             <div class="footer_box_title">
                 Contact
             </div>
-            <a class="ftbox_link" href="https://github.com/towacot">Github Account</a>
-            <div class="ftbox_link">mynavisnak@gmail.com</div>
+            <a class="ftbox_link" href="https://github.com/towacot">Github</a>
+            <a class="ftbox_link" href="https://forms.gle/83BuAJsXhQsuQ6cR7">連絡フォーム</a>
             <div class="ftbox_text">ヤバい欠陥を見つけた等ありましたらご連絡ください。</div>
         </div>
         <div class="footer_box">
@@ -44,8 +49,7 @@
                 About
             </div>
             <div class="ftbox_text">
-                PHP MySQL Laravel等々を学習するべく作成。したものの、結局CSSに一番時間を取られているような気がする。
-                <br>具体的にはMasonryレイアウトの夢を10時間ほど見ていた。
+                PHP MySQL Laravel等々を学習するべく作成。したものの、結局CSSに一番時間を取られているような気がする。AIの助けを借りないことをサブの目標とした。
             </div>
 
         </div>
