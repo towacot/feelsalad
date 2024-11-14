@@ -23,6 +23,7 @@ class PostResource extends Resource
     {
         return $form
             ->schema([
+//                入力部分、画像を含んだテキストatode
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
@@ -37,6 +38,7 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
+//                一覧にしてくれてすごい
                 Tables\Columns\TextColumn::make('title')
                     ->searchable()
                     ->sortable(),

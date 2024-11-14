@@ -18,12 +18,11 @@
     :root {
         --side-margin:15vw;
     }
-
 }
+/*全体的に*/
 html{
     font-family: Didact Gothic, notosans,serif;
 }
-
 a{
     text-decoration: none;
 }
@@ -32,6 +31,7 @@ body{
     padding:0;
     margin:0;
 }
+/*ヘッダー部分*/
 header{
     background: #ffffff;
     padding:0 var(--side-margin);
@@ -55,12 +55,10 @@ header{
     font-weight: lighter;
     text-decoration: none;
     color: var(--textcolor);
-
 }
 .title_description{
     color: var(--subtextcolor);
     font-size: 1.3rem;
-
 }
 .navibar{
     padding:0;
@@ -72,11 +70,10 @@ header{
     font-size: 1.7rem;
     color: var(--subtextcolor);
 }
-
+/*本体部分*/
 .container{
     padding:0 var(--side-margin);
     margin:0;
-
 }
 .titlebar{
     display:flex;
@@ -90,14 +87,12 @@ header{
         font-size: 2.5rem;
     }
 }
-
 .timeline{
     background: #ffffff;
 }
 .post_card{
     text-decoration: none;
     color:var(--textcolor);
-    
 }
 .post_card:visited{
     text-decoration: none;
@@ -109,7 +104,7 @@ header{
 }
 .post_title{
     font-size:2rem;
-    font-weight:regular;
+    font-weight:normal;
     margin-bottom:0.3rem;
 }
 .post_description {
@@ -117,6 +112,7 @@ header{
     font-size:1.2rem;
     margin-bottom:1rem;
 }
+/*フッター部分*/
 .footer{
     padding:0 var(--side-margin);
     margin-top:10vh;
@@ -131,7 +127,6 @@ header{
 .footer_box{
     display:flex;
     flex-flow: column;
-
 }
 .footer_box_title{
     font-weight: bold;
@@ -140,13 +135,11 @@ header{
 }
 .ftbox_text{
     color: var(--subsubtextcolor);
-
 }
 .ftbox_link{
     color: var(--subsubtextcolor);
 }
-
-
+/*詳細表示のところ*/
 .show_container{
     margin-top:1rem;
     display:flex;
@@ -160,7 +153,6 @@ header{
         border-radius: 1%;
     }
 }
-
 .show_title{
     font-weight: normal;
     font-size:2rem;

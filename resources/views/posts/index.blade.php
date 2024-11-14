@@ -2,7 +2,6 @@
 @section('content')
     <div class="container">
         <div class="titlebar">
-{{--            <a class="btn btn-secondary float-end mt-3" href="{{ route('posts.create') }}" role="button">Add Post</a>--}}
             <h1>Articles</h1>
         </div>
 
@@ -12,6 +11,7 @@
                 <p>{{ $message }}</p>
             </div>
         @endif
+        {{--ずらーっと出す--}}
         <div class="timeline">
         @if (!empty($posts) && count($posts) > 0)
             @foreach ($posts as $post)
@@ -19,11 +19,10 @@
                     <div class="post_timestamp">{{$post->created_at}}</div>
                     <div class="post_title">{{$post->title}}</div>
                     <div class="post_description">{{ strip_tags(Str::limit( $post->description,150,'…')) }}</div>
-
                 </a>
             @endforeach
         @else
-            <p>No Posts found</p>
+                <p>No Posts found</p>
             @endif
         </div>
     </div>
