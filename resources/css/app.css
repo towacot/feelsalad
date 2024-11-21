@@ -16,7 +16,7 @@
 }
 @media screen and (max-width: 1100px) {
     :root {
-        --side-margin:15vw;
+        --side-margin:12vw;
     }
 }
 /*全体的に*/
@@ -111,6 +111,7 @@ header{
     padding-bottom:0.3rem;
     font-size:1.2rem;
     margin-bottom:1rem;
+    color:var(--subtextcolor);
 }
 /*フッター部分*/
 .footer{
