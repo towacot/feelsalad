@@ -165,6 +165,26 @@ header{
         font-size:1.7rem;
         line-height:0.8rem;
     }
+    figure{
+        padding:0 2rem;
+        a{
+            pointer-events: none;
+        }
+        img{
+            width:100%;
+            max-width:100%;
+            height:auto;
+            padding:0;
+        }
+        .attachment__caption{
+            display:none;
+        }
+        .attachment__caption--edited{
+            display:block;
+            font-size:1rem;
+            color:var(--textcolor);
+        }
+    }
 }
 .show_title{
     font-weight: normal;

@@ -18,7 +18,12 @@
                 <a class="post_card" href="{{route('posts.show',['id' => $post->id]) }}">
                     <div class="post_timestamp">{{ $post->created_at->format('Y-m-d') }}</div>
                     <div class="post_title">{{$post->title}}</div>
-                    <div class="post_description">{{ strip_tags(Str::limit( $post->description,150,'…')) }}</div>
+                    @php
+                        $textOnlyDescription = preg_replace('/<figure[^>]*>.*?<\/figure>\s*/is', '', $post->description);
+                    @endphp
+                    <div class="post_description">
+                        {{ strip_tags(Str::limit($textOnlyDescription, 180, '…')) }}
+                    </div>
                 </a>
             @endforeach
         @else

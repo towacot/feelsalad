@@ -29,7 +29,9 @@ class PostResource extends Resource
                     ->maxLength(255),
                 Forms\Components\RichEditor::make('description')
                     ->required()
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->fileAttachmentsDisk('public')
+                    ->fileAttachmentsDirectory('images'),
                 Forms\Components\FileUpload::make('image')
             ]);
     }
