@@ -18,6 +18,12 @@
     :root {
         --side-margin:12vw;
     }
+    .show_description{
+    figure{
+        padding:0 0rem;
+        margin:0;
+    }
+}
 }
 /*全体的に*/
 html{
@@ -166,7 +172,7 @@ header{
         line-height:0.8rem;
     }
     figure{
-        padding:0 2rem;
+        padding:0 1.5rem;
         a{
             pointer-events: none;
         }
