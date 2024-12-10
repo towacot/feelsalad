@@ -22,7 +22,7 @@
                         $textOnlyDescription = preg_replace('/<figure[^>]*>.*?<\/figure>\s*/is', '', $post->description);
                     @endphp
                     <div class="post_description">
-                        {{ strip_tags(Str::limit($textOnlyDescription, 180, '…')) }}
+                        {{ strip_tags(Str::limit($textOnlyDescription, 150, '…')) }}
                     </div>
                 </a>
             @endforeach
