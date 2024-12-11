@@ -23,7 +23,7 @@
     <div class="navibar">
         <a class="navibar_item" href="{{ route('posts.index') }}">Home</a>
         {{--検索つけたい atode--}}
-         </div>
+    </div>
   </nav>
 </header>
 {{--ここに本体がくる--}}

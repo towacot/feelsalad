@@ -16,14 +16,11 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
-
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-//                入力部分、画像を含んだテキストatode
+//                入力部分、画像を含んだテキスト
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
@@ -59,21 +56,5 @@ class PostResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListPosts::route('/'),
-            'create' => Pages\CreatePost::route('/create'),
-            'edit' => Pages\EditPost::route('/{record}/edit'),
-        ];
     }
 }
