@@ -177,7 +177,7 @@ header{
         line-height:0.8rem;
     }
     figure{
-        padding:0 2rem;
+        padding:0 0rem;
         a{
             pointer-events: none;
         }
