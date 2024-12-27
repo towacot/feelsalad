@@ -17,7 +17,7 @@
 <header>
   <nav class="head_container">
     <div class="title_box">
-        <a class="title_text" href="{{ route('posts.index') }}">Feel Salad</a>
+        <a class="title_text" href="{{ route('posts.index') }}">Feel <br class="title_br"/>Salad</a>
         <div class="title_description">archive of my progress, job hunting diary or rejected record</div>
     </div>
     <div class="navibar">

@@ -14,9 +14,9 @@
     font-weight: normal;
     src: url('https://towacott.com/fonts/NotoSansJP-LightS.woff2') format('woff2');
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
     :root {
-        --side-margin:12vw;
+        --side-margin:8vw;
     }
 }
 /*全体的に*/
@@ -55,6 +55,16 @@ header{
     font-weight: lighter;
     text-decoration: none;
     color: var(--textcolor);
+    .title_br{
+        display:none;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .title_text{
+        .title_br{
+            display:block;
+        }
+    }
 }
 .title_description{
     color: var(--subtextcolor);
@@ -165,6 +175,10 @@ header{
         font-size:1.7rem;
         line-height:1.8rem;
     }
+    p{
+        letter-spacing:0.03rem;
+        font-size:18px;
+    }
     figure{
         padding:0 0rem;
         margin:0;
@@ -197,7 +211,7 @@ header{
     font-size: 0.8rem;
     color: var(--subtextcolor);
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
     .show_description{
         figure{
             padding:0 0rem;
