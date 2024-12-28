@@ -43,6 +43,7 @@ class PostResource extends Resource
                     ->searchable()
                     ->sortable(),
             ])
+            ->defaultSortOptionLabel('created_at', 'desc')
             ->filters([
                 //
             ])
