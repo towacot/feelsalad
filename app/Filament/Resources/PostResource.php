@@ -29,7 +29,6 @@ class PostResource extends Resource
                     ->columnSpanFull()
                     ->fileAttachmentsDisk('public')
                     ->fileAttachmentsDirectory('images'),
-                Forms\Components\FileUpload::make('image')
             ]);
     }
 
@@ -39,8 +38,7 @@ class PostResource extends Resource
             ->columns([
 //                一覧にしてくれてすごい
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable()
-                    ->sortable(),
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->searchable()
                     ->sortable(),
@@ -55,6 +53,7 @@ class PostResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->paginated(false);
     }
 }
